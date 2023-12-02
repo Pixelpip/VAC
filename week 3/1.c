@@ -1,3 +1,7 @@
+//A number is entered through the keyboard. 
+//Write a program to obtain the reversed number without using any builtin functions.
+//Determine  whether the original and reversed numbers are equal or not.
+
 #include <stdio.h>
 
 int main() {

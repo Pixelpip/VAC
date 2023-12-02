@@ -1,3 +1,6 @@
+//Write a program to find the  difference between the 2nd smallest and 3rd biggest number in the list.
+// The input is an array given through the keyboard. It should work for any array of size 3 or more .
+
 #include<stdio.h>
 int main() {
     int n, i;
