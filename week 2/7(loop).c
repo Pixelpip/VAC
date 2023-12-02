@@ -1,3 +1,6 @@
+//Print the below given 8 patterns. Number of rows is given by user through keyboard. Use only loops
+//this one prints all kinds of pattern and does not ask for user choice for which patttern to print 
+
 #include <stdio.h>
 int main() {
     int row;

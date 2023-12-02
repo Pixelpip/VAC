@@ -1,3 +1,6 @@
+//If a number is input through the keyboard, write a  program to calculate the sum of its digits. 
+//The number can have any number of digits.
+
 #include <stdio.h>
 int main() {
     int number;

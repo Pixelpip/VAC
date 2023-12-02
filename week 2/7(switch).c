@@ -1,3 +1,8 @@
+////Print the below given 8 patterns. Number of rows is given by user through keyboard. Use only loops
+//this one uses switch case and asks for user input for printing which kind of pattern
+
+
+
 #include <stdio.h>
 
 int main() {
