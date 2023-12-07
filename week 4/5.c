@@ -1,3 +1,5 @@
+//print the pattern 
+
 #include <stdio.h>
 
 
