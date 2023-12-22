@@ -1,3 +1,5 @@
+//Write a program to delete all vowels from a sentence.
+
 #include <stdio.h>
 #include <string.h>
 

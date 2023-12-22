@@ -1,3 +1,5 @@
+//Find Frequency of each character in a string. String is given by user.
+
 #include <stdio.h>
 #define MAX_LENGTH 100
 
