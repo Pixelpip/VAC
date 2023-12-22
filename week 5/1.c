@@ -1,31 +1,44 @@
-//Write a program to sort a set of names stored in an array in alphabetical order.
+#include <stdio.h>
+#include <string.h>
 
+#define MAX_NAMES 5
+#define MAX_LENGTH 50
 
-#include<stdio.h>
-#include<string.h>
-void main(){
-    char stg[20][50];//string with max input 20 and length of each at 50 characters max 
-    printf("enter the names:");
-    for(int i=0;i<20;i++){
-        printf("enter the name %d:",(i+1));
-        scanf("%s",stg[i]);
+int main() {
+    char names[MAX_NAMES][MAX_LENGTH];
+    char temp[MAX_LENGTH];
+
+    printf("Enter %d names:\n", MAX_NAMES);
+    for (int i = 0; i < MAX_NAMES; i++) {
+        printf("Enter name %d: ", i + 1);
+        scanf("%s", names[i]);
     }
-    char temp[20][50];
-    for(int i=0;i<20;i++){
-        for(int j=0;j<50;j++){
-            if(stg[i][j]<stg[i+1][j]){
-                temp[i][j]=stg[i][j];
-                stg[i][j]=stg[i+1][j];
-                stg[i+1][j]=temp[i][j];
-                
-            }
-            printf("before:%s after:%s",stg[i],stg[i+1]);
-            printf("\n");
 
+    // Perform bubble sort to arrange names in alphabetical order
+    for (int i = 0; i < MAX_NAMES - 1; i++) {
+        for (int j = 0; j < MAX_NAMES - i - 1; j++) {
+            int k = 0;
+            while (names[j][k] != '\0' || names[j + 1][k] != '\0') {
+                if (names[j][k] > names[j + 1][k]) {
+                    // Swap names character by character
+                    for (int l = 0; l < MAX_LENGTH; l++) {
+                        temp[l] = names[j][l];
+                        names[j][l] = names[j + 1][l];
+                        names[j + 1][l] = temp[l];
+                    }
+                    break; // Break the loop if the swap is done
+                } else if (names[j][k] < names[j + 1][k]) {
+                    break; // Break if the order is already correct
+                }
+                k++;
+            }
         }
     }
 
+    printf("\nSorted names in alphabetical order:\n");
+    for (int i = 0; i < MAX_NAMES; i++) {
+        printf("%s\n", names[i]);
+    }
 
-
-
+    return 0;
 }
